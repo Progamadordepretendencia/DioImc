@@ -48,16 +48,22 @@ class Pessoa {
 
   double imc(double peso, double altura){
     final calculo =  peso/(altura*altura);
-    if (calculo < 19) {
-      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você está abaixo do peso. Talvez deva melhorar a alimentação");
-    } else if(calculo > 19 && calculo <23.9){
-      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você está normal. Bom trabalho");
-    } else if(calculo > 24 && calculo<28.9){
-      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você esta com obesidade leve. Seria uma boa ideia comer menos gorduras e fazer caminhadas");
-    } else if(calculo >29 && calculo < 38.9){
-      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você esta com obesidade moderada. Que tal começar uma alimentação regrada e fazer exercícios");
-    }else{
-      print("${getNome()} você esta com obesidade morbida. Infelizmente nestes estágio é recomendado que busque assistência de algum profissional especializado");
+    if (calculo < 16) {
+      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você está com Magreza grave.");
+    } else if(calculo > 16 && calculo <17){
+      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você está com Magreza moderada");
+    } else if(calculo > 17 && calculo<18.5){
+      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você esta com Magreza Leve.");
+    } else if(calculo >28.5 && calculo < 25){
+      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você esta Saudavel.");
+    } else if(calculo >25 && calculo<30){
+      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você esta com Sobrepeso.");
+    } else if(calculo >30 && calculo<35){
+      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você esta com obesidade Grau I.");
+    } else if(calculo >35 && calculo<40){
+      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você esta com obesidade Grau II(Severa).");
+    } else{
+      print("${getNome()} seu Imc é ${calculoFix(calculo)} e você esta com obesidade Grau III(morbida).");
     }
   
      return calculo;
